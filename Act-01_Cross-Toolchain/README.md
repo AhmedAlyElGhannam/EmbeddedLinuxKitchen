@@ -154,7 +154,7 @@
 1. Finally, you can call `qemu-arm` and pass the executable to it. Bare in mind that it will not run **unless you pass the path of the toolchain's sysroot**. The `sysroot` is a directory that acts as a pseudo-filesystem that allows dynamic linking with libraries even if the target does not have an operating system
 
     ```bash
-    qemu-arm -L /home/nemesis/x-tools arm-nemesis-linux-musleabihf arm-nemesis-linux-musleabihf/sysroot main
+    qemu-arm -L /home/nemesis/x-tools/arm-nemesis-linux-musleabihf/arm-nemesis-linux-musleabihf/sysroot main    
     ```
 
 ## Results
