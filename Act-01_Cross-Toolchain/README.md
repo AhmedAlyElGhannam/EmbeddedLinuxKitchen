@@ -100,7 +100,7 @@
     ```bash
     vim ~/.bashrc
     # add the PATH line to .bashrc
-    PATH="/home/nemesis/x-tools/arm-nemesis-linux-musleabihf/bin/:/home/nemesis/x-tools/arm-nemesis-linux-gnueabihf/bin/:/home/nemesis/x-tools/aarch64-rpi4-linux-gnu/bin/:$PATH" 
+    PATH="/home/nemesis/x-tools/arm-nemesis-linux-uclibcgnueabihf/bin:/home/nemesis/x-tools/arm-nemesis-linux-musleabihf/bin/:/home/nemesis/x-tools/arm-nemesis-linux-gnueabihf/bin/:/home/nemesis/x-tools/aarch64-rpi4-linux-gnu/bin/:$PATH" 
     ```
 
 1. Source `.bashrc` to apply the changes to your path variable.
