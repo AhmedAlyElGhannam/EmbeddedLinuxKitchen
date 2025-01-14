@@ -144,15 +144,31 @@ After copying the specified files + `u-boot.bin` into your `boot` partition, unm
 
 1. Download a serial terminal of your choice. I chose to use `gtkterm`.
 
+    ```bash
+    sudo apt install gtkterm -y
+    ```
+
 1. If your USB-to-TTL keeps getting disconnected as soon as it is connected to your computer, remove the package specified in this command:
 
+    ```bash
+    sudo apt remove brltty
+    ```
+
 1. Do not forget to add your user to the `dialout` group to have access on your serial port communication.
+
+    ```bash
+    sudo usermod -aG dialout $USER
+    ```
 
 1. Connect `Rx` of RPi3B+ with `Tx` of USB-to-TTL, `Tx` of RPi3B+ with `Rx` of USB-to-TTL, and `GND` of both as per the RPi3B+ pinout diagram provided below.
 
 ![](./README_Photos/pinout.jpg)
 
 1. Connect the USB-to-TTL, then launch `gtkterm`.
+
+    ```bash
+    gtkterm -p /dev/ttyUSB0 -s 115200
+    ```
 
 1. Insert the SD card into the RPi3B+, then connect to a 5W power source.
 
