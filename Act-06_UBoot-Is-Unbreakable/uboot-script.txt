@@ -1,0 +1,12 @@
+setenv loadFromFAT \
+"if mmc dev; then run checkFileExistInMMC; else run loadFromTFTP; fi"
+
+setenv checkFileExistInMMC \
+"if fatload mmc 0:1 0xC100000 blinky.img; then echo Done!; else run loadFromTFTP; fi"
+
+setenv loadFromTFTP \
+"if tftp 0xC100000 blinky.img; then echo Done!; else echo AYO!; fi"
+
+setenv bootcmd "run loadFromFAT"
+
+saveenv
