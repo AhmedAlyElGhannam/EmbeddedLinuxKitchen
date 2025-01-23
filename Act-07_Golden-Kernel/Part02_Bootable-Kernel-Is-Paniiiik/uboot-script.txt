@@ -21,6 +21,6 @@ setenv bootImage \
 "booti $kernel_addr_r - $fdt_addr_r"
 
 setenv bootcmd "run checkIfMMCDeviceExists"
-setenv bootargs "8250.nr_uarts=1 console=ttyS0,115200n8"
+setenv bootargs "root=/dev/mmcblk0p2 rw rootfstype=ext4 8250.nr_uarts=1 console=ttyS0,115200n8 init=/sbin/init"
 
 saveenv
