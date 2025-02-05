@@ -1,0 +1,7 @@
+kernel=u-boot.bin
+#kernel=kernel8.img
+
+arm_64bit=1
+device_tree=bcm2837-rpi-3-b-plus.dtb
+enable_uart=1
+dtoverlay=disable-bt

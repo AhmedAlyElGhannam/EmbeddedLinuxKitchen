@@ -1,0 +1,36 @@
+#!/bin/sh
+mount -t proc none /proc
+mount -t sysfs none /sys
+mount -t devtmpfs null /dev
+
+echo /sbin/mdev > /proc/sys/kernel/hotplug
+mdev -s  
+
+
+echo "Waiting for /dev/sda1..."
+while [ ! -e /dev/sda1 ]; do
+    sleep 1
+done
+echo "/dev/sda1 detected!"
+
+echo "Waiting for /dev/sda2..."
+while [ ! -e /dev/sda2 ]; do
+    sleep 1
+done
+echo "/dev/sda2 detected!"
+
+mdev -s
+
+echo "Choose the rootfs you want to mount."
+echo "Enter 1 for rootfsP1 (/dev/sda1)."
+echo "Enter 2 for rootfsP2 (/dev/sda2)."
+read -p 'Your Choice: ' ROOTFS
+
+if [[ "$ROOTFS" -eq 1 || "$ROOTFS" -eq 2 ]]; then
+	mount -w -t ext4 /dev/sda${ROOTFS} /mnt/root
+	exec chroot /mnt/root /linuxrc
+else 
+	echo "INVARG!"
+	echo "Launching a shell in initrd instead..."
+fi
+
