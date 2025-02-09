@@ -180,3 +180,5 @@ See for yourself!
 ## Sources
 1. [how-to-compile-armv8-code-for-raspberry-pi-3 --- Stackoverflow](https://stackoverflow.com/questions/55560598/how-to-compile-armv8-code-for-raspberry-pi-3)
 1. [Raspberry Pi C/C++ Baremetal Programming | Using C to Direct-Register Control Your Raspberry Pi --- Low Level Learning](https://www.youtube.com/watch?v=mshVdGlGwBs&t=337s)
+1. [U-Boot Documentation](https://github.com/u-boot/u-boot)
+1. [BCM2837 Datasheet Issue --- Github](https://github.com/raspberrypi/documentation/issues/325)
