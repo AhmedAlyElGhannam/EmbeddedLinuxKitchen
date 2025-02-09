@@ -175,4 +175,8 @@ go 0x0C100000
 
 ## Results
 See for yourself!
-![](/README_Photos/loadapp.jpeg)
+![](./README_Photos/loadapp.jpeg)
+
+## Sources
+1. [how-to-compile-armv8-code-for-raspberry-pi-3 --- Stackoverflow](https://stackoverflow.com/questions/55560598/how-to-compile-armv8-code-for-raspberry-pi-3)
+1. [Raspberry Pi C/C++ Baremetal Programming | Using C to Direct-Register Control Your Raspberry Pi --- Low Level Learning](https://www.youtube.com/watch?v=mshVdGlGwBs&t=337s)
