@@ -10,6 +10,6 @@ FLAG = -static
 
 all:
 	$(CC) -c $(SRC) -I$(INC_DIR) -L$(LIB_DIR) -l$(MWIMG_LIB) -l$(MWIN_LIB) -l$(NX11_LIB) -o $(TARGET) $(FLAG)
-	@chmod +x $(TARGET)
+	#@chmod +x $(TARGET)
 clean:
 	rm $(TARGET)
