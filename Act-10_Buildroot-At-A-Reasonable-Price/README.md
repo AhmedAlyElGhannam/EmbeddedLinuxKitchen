@@ -2,7 +2,7 @@
 
 1. clone buildroot repo navigate into buildroot directory
 ```bash
-
+git clone https://github.com/buildroot/buildroot.git
 ```
 
 1. list the available configurations and choose the one suitable for RPi3B+
@@ -13,24 +13,24 @@ make raspberrypi3_64_defconfig
 ```
 
 1. enter TUI configuration menu and enable the following settings then press esc twice to exit.
-```
-make menuconfig
-```
-    1. System Configuration -> Init System -> Change it to SystemV.
-    1. System Configuration -> Root Password -> set a root password
-    1. DIRECTLY UNDER ROOT PASSWORD -> change default shell to bash
-    1. Target Packages -> Text Editors and Viewers -> Add bat/less/vim/nano/emacs.
-    1. Target Packages -> Debugging, Profiling, and Benchmark -> add gdb.
-    1. Target Packages -> Development Tools -> Add make, grep, sed, git, tree.
-    1. Target Packages -> Games -> Add ascii_invaders.
-    1. Target Packages -> Hardware Handling -> add avrdude, openocd, u-boot-tools, picocom.
-    1. Target Packages -> Interpreter Languages and Scripting -> add python3.
-    1. Target Packages -> Libraries -> Contains tons of stuff like opencv4 under Graphics.
-    1. Target Packages -> Networking Applications -> Add iw, open-ssh, connman, Enable Ethernet Support, Enable Wifi Support.
-    1. Target Packages -> Shells and Utilities -> Add sudo, time, file, which, tmux, Neofetch for a drippy build.
-    1. Target Packages -> System Tools -> add htop (also can add start-stop-daemon from here)
-    1. Filesystem Images -> Set Exact Size -> set rootfs to 8G to accomodate all the added packages. (default is 150M and it will give you an error if you add a lot of packages saying it is out of space.)
-    1. Bootloaders -> U-boot (enable)
+    ```
+    make menuconfig
+    ```
+    1. `System Configuration` -> `Init System` -> Change it to SystemV.
+    1. `System Configuration` -> `Root Password` -> set a root password
+    1. `DIRECTLY UNDER ROOT PASSWORD` -> change default shell to bash
+    1. `Target Packages` -> `Text Editors and Viewers` -> Add bat/less/vim/nano/emacs.
+    1. `Target Packages` -> `Debugging, Profiling, and Benchmark` -> add gdb.
+    1. `Target Packages` -> `Development Tools` -> Add make, grep, sed, git, tree.
+    1. `Target Packages` -> `Games` -> Add ascii_invaders.
+    1. `Target Packages` -> `Hardware Handling` -> add avrdude, openocd, u-boot-tools, picocom.
+    1. `Target Packages` -> `Interpreter Languages and Scripting` -> add python3.
+    1. `Target Packages` -> `Libraries` -> Contains tons of stuff like opencv4 under Graphics.
+    1. `Target Packages` -> `Networking Applications` -> Add iw, open-ssh, connman, Enable Ethernet Support, Enable Wifi Support.
+    1. `Target Packages` -> `Shells and Utilities` -> Add sudo, time, file, which, tmux, Neofetch for a drippy build.
+    1. `Target Packages` -> `System Tools` -> Add htop (also can add start-stop-daemon from here)
+    1. `Filesystem Images` -> `Set Exact Size` -> Set rootfs to 8G to accomodate all the added packages. (default is 150M and it will give you an error if you add a lot of packages saying it is out of space.)
+    1. `Bootloaders` -> U-boot (enable)
 
 1. build your image. it takes about an hour on my machine and it needs a strong internet connection.
 ```bash
