@@ -17,3 +17,4 @@ This repository contains my work for the tasks in Embedded Linux intensive cours
 ### [Adding a New System Call in Linux for ARM64 Machines](https://github.com/AhmedAlyElGhannam/EmbeddedLinuxKitchen/tree/main/OVA-01_Thus-Spoke-The-Kernel)
 ### [Configuring and Building GUI For The Linux-From-Scratch Image Using MicroWindow](https://github.com/AhmedAlyElGhannam/EmbeddedLinuxKitchen/tree/main/OVA-02_OH-MY-GUI)
 ### [Using Network Filesystems (NFS)](https://github.com/AhmedAlyElGhannam/EmbeddedLinuxKitchen/tree/main/OVA-03_Rootfs-Over-The-Network)
+### [An Embedded Linux Image From Scratch Over The Network For Raspberry Pi 3B+](https://github.com/AhmedAlyElGhannam/Embedded-Linux-From-Scratch-Over-The-Network-RPi3B)
